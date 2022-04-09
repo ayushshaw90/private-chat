@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy chat</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy chat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">Privacy Chat</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            
-          </nav>
-          <button id="user" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Username
-          </button>
-        </div>
-      </header>
-      <div id="msgbox" style="margin: auto;" class="min-h-[60vh] max-h-[60vh] overflow-auto height-96 max-w-screen-md border-solid border-4 rounded-md py-4"></div>
-      <div id="msginp" style="margin: auto;" class="place-self-center gid grid-cols-3 gap-4 items-center max-w-screen-md">
-        <input type="text" id="message" name="name" class="my-4 w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out max-w-screen-md">
-        <button id="submit" class="px-2 float-right rounded-md h-8 bg-amber-400 text-white">Send</button>
-      </div>
-      <script src="/socket.io/socket.io.js"></script>
-      <script src="/client.js/"></script>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full"
+          viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Privacy Chat</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+
+      </nav>
+      <button id="user"
+        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Username
+      </button>
+    </div>
+  </header>
+  <div id="msgbox" style="margin: auto;"
+    class="overflow-x-scroll min-h-[60vh] max-h-[60vh] overflow-auto height-96 max-w-screen-md border-solid border-4 rounded-md py-4">
+  </div>
+  <div id="msginp" style="margin: auto;" class="place-self-center gid grid-cols-3 gap-4 items-center max-w-screen-md">
+    <form action="" id="fmsg">
+      <input type="text" id="message" name="messageName"
+        class="my-4 w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out max-w-screen-md">
+      <button id="submit" class="px-2 float-right rounded-md h-8 bg-amber-400 text-white" typr="submit">Send</button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js/"></script>
 </body>
+
 </html>

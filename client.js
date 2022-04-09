@@ -11,13 +11,14 @@ function createMessage(text, isLeft = true) {
     clist.add("mx-6");
     clist.add("my-4", "clear-both");
     let cl2 = nspn.classList;
-    cl2.add("bg-amber-400", "px-4", "py-2", "clear-both")
+    cl2.add("bg-amber-400", "px-4", "py-2", "clear-both", "overflow-x-auto")
     if (isLeft) {
         cl2.add("rounded-br-lg", "rounded-tr-lg", "float-left", "rounded-tl-lg")
     } else {
         cl2.add("rounded-bl-lg", "rounded-tl-lg", "rounded-tr-lg", "float-right")
     }
     msgbox.appendChild(nmsg);
+    scrollToBottom(msgbox);
 }
 let name;
 
@@ -47,12 +48,18 @@ send.addEventListener('click', (e)=>{
         input.value="";
     }
 })
+function scrollToBottom(element) {
+    element.scroll({ top: element.scrollHeight, behavior: 'smooth' });
+  }
+
+form = document.getElementById("fmsg");
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    if(input.value){
+        createMessage(input.value, false);
+        socket.emit('chat-message', input.value);
+        input.value="";
+    }
+})
 
 
-
-
-
-
-
-createMessage("Welcome", true);
-createMessage("Hello", false);
