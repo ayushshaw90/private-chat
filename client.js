@@ -41,13 +41,6 @@ socket.on('left', (name) =>{
 //send message
 const input = document.getElementById('message');
 const send = document.getElementById('submit');
-send.addEventListener('click', (e)=>{
-    if(input.value){
-        createMessage(input.value, false);
-        socket.emit('chat-message', input.value);
-        input.value="";
-    }
-})
 function scrollToBottom(element) {
     element.scroll({ top: element.scrollHeight, behavior: 'smooth' });
   }
