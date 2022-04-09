@@ -7,9 +7,11 @@ const io = new Server(server);
 let users = {};
 app.get('/', (req, res)=>{
     // res.send('<h1>Hello World!</h1>');
+    res.status(200);
     res.sendFile(__dirname + '/index.html');
 });
 app.get('/client.js/', (req, res)=>{
+    res.status(200);
     res.sendFile(__dirname+ '/client.js');
 })
 
@@ -28,7 +30,7 @@ io.on('connection', (socket)=> {
         socket.broadcast.emit('message', {"message": msg, "name" : users[socket.id]});
     });
 });
-
-server.listen(3000, ()=>{
-    console.log('listening on *:3000');
+const PORT = process.env.PORT || 8080;
+server.listen(PORT, ()=>{
+    console.log('listening on *:'+PORT);
 });

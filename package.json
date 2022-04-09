@@ -1,16 +1,23 @@
 {
   "name": "chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is an anonymous private chat app.",
   "main": "index.js",
   "scripts": {
-    "run": "node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "ayush",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
     "socket.io": "^4.4.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
