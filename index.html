@@ -29,7 +29,7 @@
     </div>
   </header>
   <div id="msgbox" style="margin: auto;"
-    class="overflow-x-scroll min-h-[50vh] max-h-[60vh] overflow-auto height-96 max-w-screen-md border-solid border-4 rounded-md py-4 border-gray-100 dark:border-gray-700">
+    class="overflow-x-auto min-h-[50vh] max-h-[60vh] overflow-auto height-96 max-w-screen-md border-solid border-4 rounded-md py-4 border-gray-100 dark:border-gray-700">
   </div>
   <div id="msginp" style="margin: auto;" class="place-self-center gid grid-cols-3 gap-4 items-center max-w-screen-md">
     <form action="" id="fmsg">
@@ -43,8 +43,18 @@
 </body>
 <style>
   @media (prefers-color-scheme: dark){
+    #msgbox{
+      scrollbar-color: #5b5b5b rgb(49,50,69);
+    }
     #msgbox::-webkit-scrollbar{
-      background: #716d5d;
+      color: purple;
+    }
+    #msgbox::-webkit-scrollbar-track{
+      background: rgb(49, 50, 69);
+    }
+    #msgbox::-webkit-scrollbar-thumb{
+      background-color: #5b5c5d;
+      border-radius: 20px;
     }
   }
 </style>
