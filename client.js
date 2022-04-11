@@ -11,7 +11,7 @@ function createMessage(text, isLeft = true) {
     clist.add("mx-6");
     clist.add("my-4", "clear-both");
     let cl2 = nspn.classList;
-    cl2.add("bg-amber-400", "px-4", "py-2", "clear-both", "overflow-x-auto")
+    cl2.add("bg-amber-400", "px-4", "py-2", "clear-both", "overflow-x-auto", "dark:bg-amber-600")
     if (isLeft) {
         cl2.add("rounded-br-lg", "rounded-tr-lg", "float-left", "rounded-tl-lg")
     } else {
