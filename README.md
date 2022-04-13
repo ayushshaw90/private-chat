@@ -6,9 +6,9 @@ node.js is required
 After cloning the repository, open a terminal and navigate to the downloaded/cloned folder
 Execute the following commands
 
-npm i express
-npm i socket.io
-node index.js
+<div>npm i express</div>
+<div>npm i socket.io</div>
+<div>node index.js</div>
 
 
 
