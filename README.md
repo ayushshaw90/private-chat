@@ -20,3 +20,8 @@ enter your username and start chatting
 
 
 open another browser window, you have successfully entered the chat room
+
+Sample project is deployed on heroku - https://chat-pvt.herokuapp.com/
+
+Anyone can chat using the app, the chats are not saved anywhere, no worry.
+Join with your friends and chat anonymously
